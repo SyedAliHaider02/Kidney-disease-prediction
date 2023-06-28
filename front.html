@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kidney disease</title>
+    <style type="text/css">
+         h1{ font-size: 60px; 
+             text-align: center;
+             color: #e32037;
+             border: 5px solid #2de3da;
+             border-radius: 100px 100px 100px 100px;
+             font-family: 'Impact';
+             }
+
+         body{
+         background-image:url(kidney1.jpg);
+         background-size:cover;
+  }
+
+        legend{font-size: 20px; 
+             text-align: center;}
+
+        form{font-family: 'Impact';}
+        .note{color: #FF0000;}
+      
+
+    </style>
+
+</head>
+<body>
+
+<h1>KIDNEY DISEASE PREDICTION</h1>
+
+<form method="POST", action="{{url_for('home')}}">
+<fieldset>
+<legend><strong>Fill the details</strong></legend>
+<br>
+Id
+<input type ="number"  class="id" name="id">
+<br>
+<br>
+Age
+<input type ="number"  class="age" name="age" min="0" max="120">
+<br><br>
+Blood Pressure
+<input type ="number"  class="bp" name="bp" min="0" max="250">
+<br><br>
+Specific Gravity
+<input type ="number"  class="sg" name="sg" >
+<br><br>
+Albumin
+<input type ="number"  name="al" class="al">
+<br><br>
+Sugar
+<input type ="number"  name="su" class="su" min="0" max="5" >
+<br><br>
+Red Blood Cells
+<input type ="number"  name="rbc" class="rbc" min="0" max="2">
+<br><br>
+ Pus Cell
+<input type ="number"  name="pc" class="pc" min="0" max="2">
+<br><br>
+Renal Parenchymal Cells
+<input type ="number"  name="pcc" class="pcc" min="0" max="2">
+<br><br>
+Bacteria
+<input type ="number"  name="ba" class="ba" min="0" max="2">
+<br><br>
+Blood Glucose Random
+<input type ="number"  name="bgr" class="bgr">
+<br><br>
+Blood Urea
+<input type ="number"  name="bu" class="bu">
+<br><br>
+Serum Creatinine
+<input type ="number"  name="sc" class="sc">
+<br><br>
+Sodium
+<input type ="number"  name="sd" class="sd">
+<br><br>
+Potassium
+<input type ="number"  name="pot" class="pot">
+<br><br>
+Hemoglobin
+<input type ="number"  name="hemo" class="hemo">
+<br><br>
+Packed Cell Volume
+<input type ="number"  name="pcv" class="pcv">
+<br><br>
+White Blood Cell Count
+<input type ="number"  name="wc" class="wc">
+<br><br>
+Red Blood Cell Count
+<input type ="number"  name="rc" class="rc">
+<br><br>
+Hypertension
+<input type ="number"  name="htn" class="htn" min="0" max="1">
+<br><br>
+Diabetes Mellitus
+<input type ="number"  name="dm" class="dm" min="0" max="1">
+<br><br>
+Coronary Artery Disease
+<input type ="number"  name="cad" class="cad" min="0" max="1">
+<br><br>
+Appetite
+<input type ="number"  name="appet" class="appet" min="0" max="1">
+<br><br>
+Pedal Edema
+<input type ="number"  name="pe" class="pe" min="0" max="1">
+<br><br>
+Anemia
+<input type ="number"  name="ane" class="ane" min="0" max="1">
+
+<input type="submit" value ="predict!">
+</fieldset>
+</form>
+  
+ <strong class="note"> Note:
+  <br><br>
+  1) (YES is 1 and NO is 0) for parameters like  Hypertension, Coronary Artery Disease, Pedal Edema  and Anemia
+  <br><br>
+  2)(0 is "abnormal", 1 is "normal" and 2 is "Dont know" ) for Red Blood Cell Count and Puss Cell
+  <br><br>
+  3)(1 is "present" and 0 is "not present")for Renal Parenchymal Cells and Bacteria
+  <br><br>
+  4)(0 is "good" and 1 is "not good") for Appetite.
+  </strong> 
+
+
+
+</body>
+</html>
